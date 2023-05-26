@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <HEAD>
+            <meta charset="utf-8"/>
+            <title>calcular media</title>
+    </HEAD>
+
+    <body>
+        <label for="nota1">nota 1:</label>
+        <input type="number" id="nota1" />
+
+        <label for="nota2">nota 2:</label>
+        <input type="number" id="nota2" />
+
+        <label for="nota3">nota 3:</label>
+        <input type="number" id="nota3" />
+
+        <label for="nota4">nota 4</label>
+        <input type="number" id="nota4" />
+
+        <button type="button" onclick="calcularmedia()">calcular media</button>
+
+        <p id="resultado">0</p>
+
+        <script>
+            function calcularmedia() {
+                var nota1 = parsefloat(documento.getelementbyid(nota1).value)
+                var nota2 = parsefloat(documento.getelementbyid(nota2).value)
+                var nota3 = parsefloat(documento.getelementbyid(nota3).value)
+                var nota4 = parseFloat(documento.getelementbyid(nota4).value)
+
+                var media = (nota1+nota2+nota3+nota4) /4
+
+                var resultado = documento.getelementbyid("resultado")
+
+                resultado.innerhtml = media 
+            }
+        </script>
+    </body>
+</html>
